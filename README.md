@@ -22,8 +22,8 @@ src/
 Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/<your-username>/FE-Apilothub.git
-cd FE-Apilothub
+git clone https://github.com/dawng117/FE-Vietnam-Is-Awesome
+cd FE-Vietnam-Is-Awesome
 npm install
 npm run dev
 ```
