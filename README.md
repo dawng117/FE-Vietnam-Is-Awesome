@@ -6,16 +6,35 @@ Dự án frontend cho **Vietnam Is Awesome**, được xây dựng bằng **Vue 
 - Công nghệ sử dụng: Vue 3, Vite, Tailwind CSS, JavaScript.
 ## Cấu trúc thư mục
 ```bash
-src/
-├── assets/       
-├── components/  
-├── pages/          
-├── router/         
-├── store/          
-├── services/       
-├── App.vue       
-├── main.js         
-├── index.css       
+├── public/                  
+├── src/
+│   ├── assets/              
+│   ├── components/          
+│   │   ├── About/           
+│   │   │   ├── AboutLayout.vue      
+│   │   │   ├── UserInfo.vue         
+│   │   │   └── RankingBoard.vue     
+│   │   └── Event1/         
+│   │       ├── EventLayout.vue     
+│   │       ├── EventCard.vue       
+│   │       └── EventList.vue       
+│   ├── data/
+│   │   ├── members.json     
+│   │   └── ranking.json
+│    │  └── events.json 
+│   ├── pages/
+│   │   ├── AboutPage.vue    
+│   │   └── HomePage.vue   
+│   ├── router/
+│   │   └── index.js        
+│   ├── App.vue            
+│   ├── main.js             
+│   └── index.css           
+├── tailwind.config.cjs      
+├── postcss.config.cjs      
+├── vite.config.js          
+├── package.json          
+└── README.md                
 ```
 
 ## Getting Started
