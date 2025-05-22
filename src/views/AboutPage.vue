@@ -1,11 +1,20 @@
 <template>
-    <h1>222222222</h1>
+    <div class="about">
+    <UserInfo />
+  </div>
 </template>
 
 <script>
+import UserInfo from '@/components/About/UserInfo.vue';
 
+export default {
+  name: 'AboutPage',
+  components: { UserInfo }
+};
 </script>
 
-<style>
-
+<style scoped>
+.about {
+  padding: 20px;
+}
 </style>

@@ -15,7 +15,6 @@ const router = createRouter({
       name: 'about',
       component: AboutPage,
 
-      // components: () => import('../views/AboutPage.vue'),
     },
   ],
 })

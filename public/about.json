@@ -1,0 +1,29 @@
+[
+  {
+    "memberID": "001",
+    "name": "Duoc",
+    "avtURL": "https://i.pravatar.cc/300",
+    "createdAt": "2025-04-15T00:00:00Z",
+    "location": "HCMC city",
+    "headline": "Love travel, love Vietnam",
+    "role": "Member"
+  },
+  {
+    "memberID": "002",
+    "name": "Lan Anh",
+    "avtURL": "https://i.pravatar.cc/300",
+    "createdAt": "2025-03-10T00:00:00Z",
+    "location": "Ha Noi",
+    "headline": "Passionate about photography",
+    "role": "Admin"
+  },
+  {
+    "memberID": "003",
+    "name": "Minh Quan",
+    "avtURL": "https://i.pravatar.cc/300",
+    "createdAt": "2025-05-01T00:00:00Z",
+    "location": "Da Nang",
+    "headline": "Tech enthusiast and gamer",
+    "role": "Member"
+  }
+]
