@@ -1,20 +1,30 @@
 <template>
     <div class="about">
-    <UserInfo />
-  </div>
+      <UserInfo />
+      <RankingBoard />
+    </div>
 </template>
 
 <script>
 import UserInfo from '@/components/About/UserInfo.vue';
+import RankingBoard from '@/components/About/RankingBoard.vue';
 
 export default {
   name: 'AboutPage',
-  components: { UserInfo }
+  components: { UserInfo, RankingBoard}
 };
 </script>
 
 <style scoped>
 .about {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
 }
 </style>
