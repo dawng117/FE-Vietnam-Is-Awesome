@@ -4,16 +4,16 @@
     <div class="my-6 w-full bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl shadow-lg">
       <h2 class="text-xl sm:text-2xl lg:text-3xl font-bold text-center py-3 bg-indigo-600 text-white">BẢNG XẾP HẠNG</h2>
 
-      <div class="p-3 sm:p-4 lg:p-5 overflow-x-hidden">
+      <div class="p-3 sm:p-4 lg:p-5 overflow-x-auto">
         <div class="max-h-[360px] overflow-y-auto rounded-b-xl border border-indigo-200">
-          <table class="min-w-full border-collapse border border-indigo-200 text-center">
+          <table class="min-w-[1000px] w-full border-collapse border border-indigo-200 text-center">
             <thead class="sticky top-0 bg-indigo-500 text-white z-10">
               <tr>
-                <th class="border border-indigo-300 p-2 sm:p-3 w-auto sm:w-[6%] text-sm sm:text-base">Xếp hạng</th>
-                <th class="border border-indigo-300 p-2 sm:p-3 w-auto sm:w-[8%] text-sm sm:text-base">Avatar</th>
-                <th class="border border-indigo-300 p-2 sm:p-3 w-auto sm:w-[35%] text-sm sm:text-base">Tên</th>
+                <th class="border border-indigo-300 p-2 sm:p-3 w-auto sm:w-[7%] text-sm sm:text-base">Xếp hạng</th>
+                <th class="border border-indigo-300 p-2 sm:p-3 w-auto sm:w-[10%] text-sm sm:text-base">Avatar</th>
+                <th class="border border-indigo-300 p-2 sm:p-3 w-auto sm:w-[38%] text-sm sm:text-base">Tên</th>
                 <th class="border border-indigo-300 p-2 sm:p-3 w-auto sm:w-[25%] text-sm sm:text-base">Level</th>
-                <th class="border border-indigo-300 p-2 sm:p-3 w-auto sm:w-[16%] text-sm sm:text-base">Points</th>
+                <th class="border border-indigo-300 p-2 sm:p-3 w-auto sm:w-[25%] text-sm sm:text-base">Points</th>
               </tr>
             </thead>
             <tbody>
@@ -106,7 +106,7 @@
                   class="border border-indigo-200 p-2 sm:p-3 font-bold text-sm sm:text-base"
                   :class="user.memberID === currentUser?.memberID ? 'text-green-700' : 'text-indigo-800'"
                 >
-                  {{ user.points }} 
+                  {{ user.points }}
                   <span :class="user.memberID === currentUser?.memberID ? 'text-green-600' : 'text-indigo-600'" class="text-xs sm:text-sm">
                     pts
                   </span>
@@ -139,20 +139,13 @@ const sortedRankingData = computed(() =>
   [...rankingData.value].sort((a, b) => b.points - a.points)
 );
 
-// Giữ nguyên tất cả user, không loại currentUser ra
 const currentUser = computed(() => {
-  // Ví dụ user thứ 2
   return sortedRankingData.value.length > 1 ? sortedRankingData.value[1] : null;
 });
 
 const calculateNextLevelPoints = (currentLevel) => {
   return (currentLevel + 1) * 100;
 };
-
-// const calculatePointsToNextLevel = (level, points) => {
-//   const nextLevelThreshold = calculateNextLevelPoints(level);
-//   return nextLevelThreshold - points;
-// };
 
 const calculateLevelProgress = (currentPoints, currentLevel) => {
   const nextLevelPoints = calculateNextLevelPoints(currentLevel);
