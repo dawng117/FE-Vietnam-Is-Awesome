@@ -1,11 +1,7 @@
 <template>
-    <h1>hello bro</h1>
+  <EventLayout />
 </template>
 
-<script>
-
+<script setup>
+import EventLayout from '@/components/Event1/EventLayout.vue';
 </script>
-
-<style>
-
-</style>
